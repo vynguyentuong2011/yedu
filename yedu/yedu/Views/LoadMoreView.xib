@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="AJz-cZ-PNn" customClass="LoadMoreView" customModule="yedu" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yRh-Lr-vAz">
+                    <rect key="frame" x="240" y="7" width="120" height="30"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="nLv-DD-50y">
+                            <rect key="frame" x="10" y="5" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="zq8-0O-bKP"/>
+                                <constraint firstAttribute="height" constant="20" id="zyJ-pV-C5V"/>
+                            </constraints>
+                        </activityIndicatorView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0T-KS-Uba">
+                            <rect key="frame" x="38" y="6" width="85" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="85" id="5zk-if-SIG"/>
+                                <constraint firstAttribute="height" constant="18" id="B6Q-2y-Pb5"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" systemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="H0T-KS-Uba" firstAttribute="centerY" secondItem="yRh-Lr-vAz" secondAttribute="centerY" id="FYN-Nf-xx2"/>
+                        <constraint firstAttribute="width" constant="120" id="HUp-Vf-sqa"/>
+                        <constraint firstItem="nLv-DD-50y" firstAttribute="centerY" secondItem="yRh-Lr-vAz" secondAttribute="centerY" id="ZtD-bJ-LFy"/>
+                        <constraint firstItem="nLv-DD-50y" firstAttribute="leading" secondItem="yRh-Lr-vAz" secondAttribute="leading" constant="10" id="a7d-01-waF"/>
+                        <constraint firstAttribute="height" constant="30" id="suz-0L-HVN"/>
+                        <constraint firstItem="H0T-KS-Uba" firstAttribute="leading" secondItem="nLv-DD-50y" secondAttribute="trailing" constant="8" id="y1d-PY-1Nm"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Hqb-Wn-L3C"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="yRh-Lr-vAz" firstAttribute="centerY" secondItem="AJz-cZ-PNn" secondAttribute="centerY" id="Vze-EF-4BG"/>
+                <constraint firstItem="yRh-Lr-vAz" firstAttribute="centerX" secondItem="AJz-cZ-PNn" secondAttribute="centerX" id="ZWo-9m-XHo"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="activityIndicatorView" destination="nLv-DD-50y" id="OIe-HC-6d5"/>
+            </connections>
+            <point key="canvasLocation" x="628" y="149"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="I0V-cz-ZTX" customClass="SearchView" customModule="yedu" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="EVT-WW-BrR">
+                    <rect key="frame" x="15" y="15" width="15" height="13.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="15" id="3rJ-jd-KWQ"/>
+                        <constraint firstAttribute="height" constant="15" id="9iy-3G-F3y"/>
+                        <constraint firstAttribute="width" constant="15" id="LNU-l8-7Iz"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="15" id="sbT-fO-boS"/>
+                    </constraints>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="YTC-ay-7tY">
+                    <rect key="frame" x="40" y="0.0" width="325" height="44"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                    <connections>
+                        <action selector="textDidChange:" destination="I0V-cz-ZTX" eventType="editingChanged" id="wvw-AI-1rW"/>
+                        <outlet property="delegate" destination="I0V-cz-ZTX" id="i2U-Ue-3S9"/>
+                    </connections>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDg-EP-ARJ">
+                    <rect key="frame" x="0.0" y="43" width="375" height="1"/>
+                    <color key="backgroundColor" red="0.7843137255" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="rdK-wj-EvV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="QM5-dh-hiC"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="YTC-ay-7tY" firstAttribute="top" secondItem="I0V-cz-ZTX" secondAttribute="top" id="Bx2-pH-DIs"/>
+                <constraint firstAttribute="trailing" secondItem="YTC-ay-7tY" secondAttribute="trailing" constant="10" id="Cfk-G6-RjW"/>
+                <constraint firstAttribute="bottom" secondItem="DDg-EP-ARJ" secondAttribute="bottom" id="Ed3-8A-YVY"/>
+                <constraint firstItem="EVT-WW-BrR" firstAttribute="leading" secondItem="I0V-cz-ZTX" secondAttribute="leading" constant="15" id="WCt-Pk-QPu"/>
+                <constraint firstAttribute="trailing" secondItem="DDg-EP-ARJ" secondAttribute="trailing" id="g2X-rx-0t3"/>
+                <constraint firstAttribute="bottom" secondItem="YTC-ay-7tY" secondAttribute="bottom" id="pAw-QS-2bA"/>
+                <constraint firstItem="DDg-EP-ARJ" firstAttribute="leading" secondItem="I0V-cz-ZTX" secondAttribute="leading" id="qht-KV-lI5"/>
+                <constraint firstItem="EVT-WW-BrR" firstAttribute="centerY" secondItem="I0V-cz-ZTX" secondAttribute="centerY" id="stE-dR-5JS"/>
+                <constraint firstItem="YTC-ay-7tY" firstAttribute="leading" secondItem="EVT-WW-BrR" secondAttribute="trailing" constant="10" id="wTZ-cQ-NT8"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="iconView" destination="EVT-WW-BrR" id="4bY-rJ-iS6"/>
+                <outlet property="separatorHeightLayoutConstraint" destination="rdK-wj-EvV" id="rj0-GT-LNU"/>
+                <outlet property="txtSearch" destination="YTC-ay-7tY" id="Ogj-GO-Hhe"/>
+            </connections>
+            <point key="canvasLocation" x="-330" y="31"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+    </resources>
+</document>

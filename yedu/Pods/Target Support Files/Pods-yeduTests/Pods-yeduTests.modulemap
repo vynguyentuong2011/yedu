@@ -1,0 +1,6 @@
+framework module Pods_yeduTests {
+  umbrella header "Pods-yeduTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,48 @@
+# platform :ios, '11.0'
+
+def network
+  pod 'Alamofire'
+  pod 'AFNetworking'
+end
+
+def rx
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'RxDataSources'
+  pod 'RxGesture'
+end
+
+def apiTools
+  pod 'Action'
+end
+
+def parse
+  pod 'ObjectMapper'
+end
+
+def uiTools
+  pod 'Kingfisher'
+  pod 'IQKeyboardManagerSwift'
+end
+
+target 'yedu' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for yedu
+  network
+  rx
+  parse
+  apiTools
+  uiTools
+  
+  target 'yeduTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'yeduUITests' do
+    # Pods for testing
+  end
+
+end
